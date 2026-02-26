@@ -46,17 +46,15 @@ Create a shortcut with these actions:
 
 #### Trigger: Share Sheet (filter to URLs / Spotify app)
 
+![shortcut-screenshot.jpeg](./shortcut-screenshot.jpeg)
+
 #### Action 1: Get Contents of URL
 ```
-URL: https://spotify-to-apple.<subdomain>.workers.dev/convert?url=[Shortcut Input]
+URL: https://spotify-to-apple.<subdomain>.workers.dev/convert?url=[Shortcut Input]&redirect=0
 Method: GET
-Follow redirects: OFF (so we get the JSON back)
 ```
-#### Action 2: Get Dictionary Value → key appleMusic from the result
+#### Action 2: Get Dictionary Value → key `appleMusic` from the result
 #### Action 3: Open URLs → opens the Apple Music app directly
-
-
-> Alternatively, just point the shortcut at ?url=[input] with redirects ON — iOS will open the Music app automatically via the 302.
 
 ## Development
 
